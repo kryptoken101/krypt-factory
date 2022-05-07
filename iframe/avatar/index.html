@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/CoinTool-App/cdn/iframe/avatar/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A pure front-end avatar generator." />
+    <title>CoinTool - NFT</title>
+    <style>
+      body {
+        margin: 0;
+      }
+
+      [v-cloak] {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        background-color: hsl(216, 14%, 14%);
+      }
+
+      [v-cloak] .placeholder {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+      }
+
+      @keyframes flip {
+        0% {
+          transform: rotateY(0);
+        }
+
+        25% {
+          transform: rotateY(180deg);
+        }
+
+        50% {
+          transform: rotateY(180deg) rotateX(180deg);
+        }
+
+        75% {
+          transform: rotateY(360deg) rotateX(180deg);
+        }
+
+        100% {
+          transform: rotateY(360deg) rotateX(360deg);
+        }
+      }
+
+      [v-cloak] .logo {
+        position: relative;
+        width: 3rem;
+        height: 3rem;
+        overflow: hidden;
+        background-color: hsl(241, 99%, 70%);
+        border-radius: 50%;
+        animation: 2s flip infinite;
+      }
+
+      [v-cloak] .logo::after {
+        position: absolute;
+        top: -40%;
+        right: -40%;
+        width: 100%;
+        height: 100%;
+        background-color: hsl(186, 84%, 74%);
+        border-radius: 50%;
+        content: '';
+      }
+
+      [v-cloak] .text {
+        margin-top: 2rem;
+        color: hsl(211, 19%, 70%);
+        font-weight: bold;
+        font-size: 1rem;
+      }
+
+      .app-loading{
+        width: 100vw;
+        height: 100vh;
+        /* background-image: linear-gradient(90deg, #29323c 0%, #485563 100%); */
+        background: rgba(43, 49, 60, 1);
+        position: fixed;
+        top:0;
+        left:0;
+        z-index: 9999;
+        display: -webkit-box;
+        display: flex;
+        justify-content: center;
+        -webkit-box-align: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .app-loading img{
+        width: 140px;
+      }
+      .app-loading p{
+        font-size: 30px;
+        margin: 20px 0;
+        color: #30B08F;
+        font-weight: bold;
+      }
+      .lds-ellipsis{display:inline-block;position:relative;width:80px;height:80px;}
+      .lds-ellipsis div{position:absolute;top:33px;width:13px;height:13px;border-radius:50%;background:#fff;animation-timing-function:cubic-bezier(0,1,1,0);}
+      .lds-ellipsis div:nth-child(1){left:8px;animation:lds-ellipsis1 0.6s infinite;}
+      .lds-ellipsis div:nth-child(2){left:8px;animation:lds-ellipsis2 0.6s infinite;}
+      .lds-ellipsis div:nth-child(3){left:32px;animation:lds-ellipsis2 0.6s infinite;}
+      .lds-ellipsis div:nth-child(4){left:56px;animation:lds-ellipsis3 0.6s infinite;}
+      @keyframes lds-ellipsis1{
+        0%{transform:scale(0);}
+        100%{transform:scale(1);}
+      }
+      @keyframes lds-ellipsis3{
+        0%{transform:scale(1);}
+        100%{transform:scale(0);}
+      }
+      @keyframes lds-ellipsis2{
+        0%{transform:translate(0,0);}
+        100%{transform:translate(24px,0);}
+      }
+
+    </style>
+    <script type="module" crossorigin src="https://cdn.jsdelivr.net/gh/CoinTool-App/cdn/iframe/avatar/assets/index.cd095e20.js"></script>
+    <link rel="modulepreload" href="https://cdn.jsdelivr.net/gh/CoinTool-App/cdn/iframe/avatar/assets/vendor.45b0d8f6.js">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CoinTool-App/cdn/iframe/avatar/assets/index.8167f087.css">
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <div class="app-loading" id="app-loading">
+        <img src="https://cdn.jsdelivr.net/gh/c0deCn/wiki@master/logo.png" alt="logo" />
+        <p>CoinTool.App</p>
+        <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+      </div>
+    </div>
+    
+  </body>
+</html>
+
