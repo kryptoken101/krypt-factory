@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Welcome to Kryptoken Factory
 
 You can use the [editor on GitHub](https://github.com/kryptoken101/krypt-factory/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
