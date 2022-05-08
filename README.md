@@ -1,3 +1,3 @@
 # KRYPT CT Factory
 
-[cointool.app](https://factory.kryptoken.site)
+[Kryptoken Factory](https://factory.kryptoken.site)
