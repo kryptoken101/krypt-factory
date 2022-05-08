@@ -1,3 +1,3 @@
-# CoinTool-cdn
+# KRYPT CT Factory
 
-[CoinTool.App](https://www.cointool.app)
+[Kryptoken Factory](https://factory.kryptoken.site)
