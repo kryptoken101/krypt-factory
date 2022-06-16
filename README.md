@@ -1,3 +1,3 @@
 # KRYPT CT Factory
 
-[Kryptoken Factory](https://factory.kryptoken.site)
+[Kryptoken CT Factory](https://factory.kryptoken.site)
